@@ -31,12 +31,12 @@
        default-autowire="byName">
 
 
-   <!-- &lt;!&ndash;开启扫描Myth分布式框架包&ndash;&gt;
+   <!-- &lt;!&ndash;开启扫描Myth分布式框架包-->
     <context:component-scan base-package="com.github.myth.*"/>
-    &lt;!&ndash;开启动态代理&ndash;&gt;
+    <!--开启动态代理-->
     <aop:aspectj-autoproxy expose-proxy="true"/>
 
-    &lt;!&ndash;配置启动类&ndash;&gt;
+    <!--配置启动类-->
     <bean id="mythTransactionBootstrap" class="com.github.myth.core.bootstrap.MythTransactionBootstrap">
         <property name="repositorySuffix" value="order-service"/>
         <property name="serializer" value="kryo"/>
@@ -56,8 +56,8 @@
             </bean>
         </property>
     </bean>-->
-    <import resource="spring-kafka.xml"/>
-    <!--<import resource="spring-rocketmq.xml"/>-->
+    <!--<import resource="spring-kafka.xml"/>-->
+    <import resource="spring-rocketmq.xml"/>
 
   <!--  <import resource="spring-rabbitmq.xml"/>
 
